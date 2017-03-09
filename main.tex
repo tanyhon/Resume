@@ -17,7 +17,7 @@
 %% to the \documentclass options. 
 %% Then compile with XeLaTeX or LuaLaTeX.
 % \documentclass[10pt,a4paper,academicons]{altacv}
-\documentclass[10pt,a4paper]{altacv}
+\documentclass[9pt,a4paper]{altacv}
 
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages. 
@@ -37,18 +37,31 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+\pagenumbering{arabic}
+
+
 
 % If using xelatex or lualatex:
 % \setmainfont{Lato}
 
 % Change the colours if you want to
-\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{VividPurple}{HTML}{173e97}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \colorlet{heading}{VividPurple}
 \colorlet{accent}{VividPurple}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
+
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={black!50!black},
+    citecolor={black!50!black},
+    urlcolor={black!80!black}
+}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
@@ -57,22 +70,24 @@
 
 %% sample.bib contains your publications
 \addbibresource{sample.bib}
-
 \begin{document}
-\name{Marissa Mayer}
-\tagline{Business Woman \& Proud Geek}
-% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
-\photo{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+\name{Anthony Raffray}
+\tagline{Project manager}
+% \photo{2.5cm}{ProfilePicture}
 \personalinfo{%
-  % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{mmayer@yahoo-inc.com}
-%   \phone{000-00-0000}
-  \mailaddress{Address, Street, 00000 County}
-  \location{Sunnyvale, CA}
-  \homepage{marissamayr.tumblr.com/}
-  \twitter{@marissamayer}
-  \linkedin{linkedin.com/in/marissamayer}
+  \email{
+  	\href{mailto:anthonyraffray@gmail.com}{anthonyraffray@gmail.com}
+  }
+  \phone{
+  	\href{tel:+15144514480}{(514) 451-4480}
+   }
+  \mailaddress{6342, Christophe Colomb}
+  \location{Montreal, QC, H2S 2G7}
+ % \twitter{@Anthonyyy}
+  \linkedin{
+  	\href{https://www.linkedin.com/in/anthonyraffray}{www.linkedin.com/in/anthonyraffray}
+  }
 %   \github{github.com/mmayer} % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
@@ -81,88 +96,120 @@
 \begin{adjustwidth}{}{-8cm}
 \makecvheader
 \end{adjustwidth}
+\begin{adjustwidth}{}{-8cm}
 
+\end{adjustwidth}
 %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{President \& CEO}{Yahoo!}{July 2012 -- Ongoing}{Sunnyvale, CA}
+\cvevent{Project Manager}{Dialog Insight}{August 2015 -- September 2016}{\scriptsize 445 Saint-Pierre St., Suite 401, Montreal, QC}
 \begin{itemize}
-\item Led the \$5 billion acquisition of the company with Verizon -- the entity which believed most in the immense value Yahoo!\ has created
-\item Acquired Tumblr for \$1.1 billion and moved the company's blog there
-\item Built Yahoo's mobile, video and social businesses from nothing in 2011 to \$1.6 billion in GAAP revenue in 2015
-\item Tripled the company's mobile base to over 600 million monthly active users and generated over \$1 billion of mobile advertising revenue last year
+\item Document the whole project (time, tasks, budget, responsibilities)
+\item Communicate between company and client
+\item Validate before conformity with the project
+\item Respect the deadlines and costs of production previously established
+\item Respond to customer inquiries
+\item Manage unassigned clients
+\item Support the team and customers on the use of the platform
+\item Invoice completed work
+\item Renew services required for clients
 \end{itemize}
 
 \divider
 
-\cvevent{Vice President of Location \& Services}{Google}{Oct 2010 -- July 2012}{Palo Alto, CA}
-\begin{itemize}
-\item Position Google Maps as the world leader in mobile apps and navigation
-\item Oversaw 1000+ engineers and product managers working on Google Maps, Google Places and Google Earth
-\end{itemize}
-
-\divider
-
-\cvevent{Vice President of Search Products \& UX}{Google}{2005 --  2010}{Palo Alto, CA}
-
-\divider
-
-\cvevent{Product Manager \& UI Lead}{Google}{Oct 2001 -- July 2005}{Palo Alto, CA}
+\cvevent{Web developer}{360 Media Solution}{April 2014 -- July 2015}{\scriptsize 355 Peel St., Bureau 901, Montreal, QC}
 
 \begin{itemize}
-\item Appointed by the founder Larry Page in 2001 to lead the Product Management and User Interaction teams
-\item Optimized Google's homepage and A/B tested every minor detail to increase usability (incl.~spacing between words, color schemes and pixel-by-pixel element alignment)
+\item Collaborate closely with designers, project managers and back-end developers
+\item Correct, improve and maintain existing websites
+\item Program new web and mobile websites
+\item Improve the company's web framework
+\item Involve in the ergonomic design of sites and applications
+\end{itemize}
+\divider
+
+\cvevent{Analyst developer}{Intellico}{September 2012 -- December 2013}{\scriptsize 2190 Lyne St., Brossard, QC}
+\begin{itemize}
+\item Training and coaching the team on Sharepoint projects
+\item Analysis of information processes
+\item Development of customized solutions
+\item Integration of customer portal solutions
+\item Monitoring client's projects, analysis of change requests
 \end{itemize}
 
-% \divider
 
-% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
-
-% \begin{itemize}
-% \item Joined the company as employe \#20 and female employee \#1
-% \item Developed targeted advertisement in order to use user's search queries and show them related ads
-% \end{itemize}
-
-\cvsection{A Day of My Life}
+\divider
+\cvevent{Web developer}{Jobs distribution over 5 years}{January 2008 -- September 2012}{Montreal, QC}
 
 % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
 % \wheelchart{outer radius}{inner radius}{
 % comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
-  10/13em/accent!30/Sleeping \& dreaming about work, 
-  25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
-  5/12em/accent!10/New York \& San Francisco Ballet Jawbone board member, 
-  20/12em/accent!40/Spending time with family,
-  5/8em/accent!20/Business development for Yahoo!\ after the Verizon acquisition,
-  30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
-  5/8em/accent!20/Baking cupcakes
+
+\wheelchart{1cm}{0.4cm}{
+  29.75/13em/accent!60/\small 2010 - Tink \\ Web developer,
+  16.55/9em/accent!75/\small 2012 - Desjardins \\ \small Lead developer,
+  37.15/12em/accent!10/\small 2008 -  Alphamosaik \\ \small Sharepoint integrator,
+  16.55/12em/accent!30/\small 2009 - Techtra \\ \small Sharepoint integrator
 }
 
+\hypertarget{page2}{Details on next page}
+
 \clearpage
+\cvsection{Experience}
+\cvevent{\hyperlink{page2}{Web developer}}{Tink}{July 2010 -- September 2012}{\scriptsize 87 Prince St., Suite 140, Montreal, QC}
+\begin{itemize}
+\item Working in a multi-project environment
+\item Design, develop, integrate corporate websites
+\item Work with short deadlines and respect deliverables \newline (time, quality, budget)
+\end{itemize}
 
-\cvsection[page2sidebar]{Publications}
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+\cvevent{}{Significant mandate at Tink}{December 2011 -- September 2012}{\scriptsize Desjardins Group}
+\begin{large}
+Lead developer
+\end{large}
+\begin{itemize}
+\item Responsibility of a team of 5 people
+\item Organization of tasks
+\item Distribution of deliverables
+\item Monitoring the quality of deliverables and feedback to the project manager
+\end{itemize}
 
 \divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+\cvevent{Sharepoint integrator}{Techtra}{January 2009 -- July 2010}{\scriptsize 2001 Rome Blvd., Brossard, QC}
+\begin{itemize}
+\item Improve SharePoint interfaces (UX and design)
+\item Configuration, administration, monitoring Sharepoint intranet sites 
+\end{itemize}
 
 \divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+\cvevent{Sharepoint integrator}{Alphamosaik}{January 2008 -- October 2008}{\scriptsize 4000 Saint Ambroise St., Montreal, QC}
+\begin{itemize}
+\item Improve SharePoint interfaces (UX and design)
+\item Configuration, administration, monitoring Sharepoint intranet sites 
+\end{itemize}
 
-%% If the NEXT page doesn't start with a \cvsection but you'd
-%% still like to add a sidebar, then use this command on THIS
-%% page to add it. The optional argument lets you pull up the 
-%% sidebar a bit so that it looks aligned with the top of the
-%% main column.
-% \addnextpagesidebar[-1ex]{page3sidebar}
+\divider
 
+\cvevent{Salesman and computer technician}{Internity}{April 2007 -- December 2007}{\scriptsize Quimper, France}
+\begin{itemize}
+\item Sale, assemble, repair computers
+\end{itemize}
+
+\divider
+
+\cvevent{Associate ceo}{Linepub}{September 2004 -- May 2005}{\scriptsize Nantes, France}
+\begin{itemize}
+\item Creation and production of websites
+\item Site Architecture
+\item Ergonomics and interface design
+\item PHP Development
+\end{itemize}
+
+\clearpage
 
 \end{document}
